@@ -1,31 +1,11 @@
 <!doctype html>
 <html lang="de">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
-    <title>News-System</title>
+    <?php include 'include_head.php'; ?>
+    <title>News - News-System</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="#">News-System</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kategorien</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include 'include_navigation.php'; ?>
     <div class="container mt-4">
         <div class="row">
             <div class="col-sm">
@@ -35,8 +15,8 @@
                 <button type="button" class="btn btn-primary float-right">News erstellen</button>
             </div>
         </div>
-        <table class="table table-striped mt-3">
-            <thead>
+        <table class="table table-striped table-light mt-3">
+            <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Titel</th>
@@ -47,7 +27,7 @@
             </thead>
             <tbody>
                 <tr>
-                <th scope="row">1</th>
+                    <th scope="row">1</th>
                     <td>Welches Europa soll's denn sein?</td>
                     <td>Klima, Migration, Digitalisierung ...</td>
                     <td>Politik</td>
@@ -57,7 +37,7 @@
                     </td>
                 </tr>
                 <tr>
-                <th scope="row">2</th>
+                    <th scope="row">2</th>
                     <td>Deutsche Wirtschaft wieder leicht gewachsen</td>
                     <td>Nach einer Stagnation Ende 2018 ...</td>
                     <td>Wirtschaft</td>
@@ -67,7 +47,7 @@
                     </td>
                 </tr>
                 <tr>
-                <th scope="row">3</th>
+                    <th scope="row">3</th>
                     <td>Pep Guardiola hat doch recht</td>
                     <td>Viele möchten einen Abgesang auf ihn ...</td>
                     <td>Sport</td>
@@ -79,8 +59,6 @@
             </tbody>
         </table>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <?php include 'include_body_end.php'; ?>
   </body>
 </html>
