@@ -12,7 +12,7 @@
                 <h1>News</h1>
             </div>
             <div class="col-sm mt-3">
-                <button type="button" class="btn btn-primary float-right">News erstellen</button>
+                <a href="news_add.php" class="btn btn-primary float-right">News erstellen</a>
             </div>
         </div>
         <table class="table table-striped table-light mt-3">
