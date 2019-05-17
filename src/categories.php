@@ -12,7 +12,7 @@
                 <h1>Kategorien</h1>
             </div>
             <div class="col-sm mt-3">
-                <button type="button" class="btn btn-primary float-right">Kategorie erstellen</button>
+                <a href="category_add.php" class="btn btn-primary float-right">Kategorie erstellen</a>
             </div>
         </div>
         <table class="table table-striped mt-3">
