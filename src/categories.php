@@ -40,7 +40,7 @@ mysqli_close($link);
                     <td><?php echo $row['name']; ?></td>
                     <td>
                         <a class="btn btn-secondary btn-sm" href="category_edit.php?id=<?php echo $row['id']; ?>" role="button">Bearbeiten</a>
-                        <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
+                        <a class="btn btn-danger btn-sm" href="category_delete.php?id=<?php echo $row['id']; ?>" role="button">Löschen</a>
                     </td>
                 </tr>
                 <?php } ?>
