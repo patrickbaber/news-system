@@ -22,7 +22,7 @@ mysqli_close($link);
         <div class="row justify-content-center">
             <div class="col-6">
                 <h1>Kategorie bearbeiten</h1>
-                <form class="mt-4 mb-4" method="POST" action="category_add_thanks.php">
+                <form class="mt-4 mb-4" method="POST" action="category_edit_thanks.php?id=<?php echo $row['id'] ?>">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" name="name" value="<?php echo $row['name'] ?>">
