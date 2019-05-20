@@ -9,6 +9,8 @@ if (!$link) {
     exit;
 }
 
+mysqli_set_charset($link, 'utf8');
+
 $sql = 'INSERT INTO categories SET name = "' .  mysqli_real_escape_string($link, $_POST['name']) . '"';
 
 $result = mysqli_query($link, $sql);
