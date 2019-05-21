@@ -38,7 +38,7 @@ mysqli_close($link);
                         <select class="form-control" name="category_id">
                             <option>Bitte wählen</option>
                             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                            <option><?php echo $row['name']; ?></option>
+                            <option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
                             <?php } ?>
                         </select>
                     </div>
