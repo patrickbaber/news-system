@@ -30,7 +30,7 @@ mysqli_close($link);
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Aktionen</th>
+                    <th scope="col"><div class="float-right">Aktionen</div></th>
                 </tr>
             </thead>
             <tbody>
@@ -39,8 +39,10 @@ mysqli_close($link);
                     <th scope="row"><?php echo $row['id']; ?></th>
                     <td><?php echo $row['name']; ?></td>
                     <td>
-                        <a class="btn btn-secondary btn-sm" href="category_edit.php?id=<?php echo $row['id']; ?>" role="button">Bearbeiten</a>
-                        <a class="btn btn-danger btn-sm" href="category_delete.php?id=<?php echo $row['id']; ?>" role="button">Löschen</a>
+                        <div class="float-right">
+                            <a class="btn btn-secondary btn-sm" href="category_edit.php?id=<?php echo $row['id']; ?>" role="button">Bearbeiten</a>
+                            <a class="btn btn-danger btn-sm" href="category_delete.php?id=<?php echo $row['id']; ?>" role="button">Löschen</a>
+                        </div>
                     </td>
                 </tr>
                 <?php } ?>

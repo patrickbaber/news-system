@@ -22,7 +22,7 @@
                     <th scope="col">Titel</th>
                     <th scope="col">Untertitel</th>
                     <th scope="col">Kategorie</th>
-                    <th scope="col">Aktionen</th>
+                    <th scope="col"><div class="float-right">Aktionen</div></th>
                 </tr>
             </thead>
             <tbody>
@@ -32,8 +32,10 @@
                     <td>Klima, Migration, Digitalisierung ...</td>
                     <td>Politik</td>
                     <td>
-                        <a class="btn btn-secondary btn-sm" href="#" role="button">Bearbeiten</a>
-                        <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
+                        <div class="float-right">
+                            <a class="btn btn-secondary btn-sm" href="#" role="button">Bearbeiten</a>
+                            <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -42,8 +44,10 @@
                     <td>Nach einer Stagnation Ende 2018 ...</td>
                     <td>Wirtschaft</td>
                     <td>
-                        <a class="btn btn-secondary btn-sm" href="#" role="button">Bearbeiten</a>
-                        <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
+                        <div class="float-right">
+                            <a class="btn btn-secondary btn-sm" href="#" role="button">Bearbeiten</a>
+                            <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -52,8 +56,10 @@
                     <td>Viele möchten einen Abgesang auf ihn ...</td>
                     <td>Sport</td>
                     <td>
-                        <a class="btn btn-secondary btn-sm" href="#" role="button">Bearbeiten</a>
-                        <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
+                        <div class="float-right">
+                            <a class="btn btn-secondary btn-sm" href="#" role="button">Bearbeiten</a>
+                            <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
+                        </div>
                     </td>
                 </tr>
             </tbody>
