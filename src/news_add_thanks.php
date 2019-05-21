@@ -2,11 +2,22 @@
 
 include 'include_database.php';
 
-var_dump($_POST);
+if (empty($_POST['status'])) {
+  $status = 0;
+} else {
+  $status = 1;
+}
 
-//$sql = 'INSERT INTO categories SET name = "' .  mysqli_real_escape_string($link, $_POST['name']) . '"';
+$sql = 'INSERT INTO 
+  news 
+SET 
+  title       = "' . mysqli_real_escape_string($link, $_POST['title']) . '",
+  short_text  = "' . mysqli_real_escape_string($link, $_POST['short_text']) . '",
+  text        = "' . mysqli_real_escape_string($link, $_POST['text']) . '",
+  category_id = ' . mysqli_real_escape_string($link, $_POST['category_id']) . ',
+  status      = ' . mysqli_real_escape_string($link, $status);
 
-//$result = mysqli_query($link, $sql);
+$result = mysqli_query($link, $sql) or die(mysqli_error($link));
 
 mysqli_close($link);
 
@@ -21,7 +32,7 @@ mysqli_close($link);
     <div class="container mt-4">
         <h1>News erstellt</h1>
         <p>Die News wurde erfolgreich erstellt.</p>
-        <a href="news.php" class="btn btn-primary">Zurück zur Übersicht</a>
+        <a href="index.php" class="btn btn-primary">Zurück zur Übersicht</a>
     </div>
     <?php include 'include_body_end.php'; ?>
   </body>

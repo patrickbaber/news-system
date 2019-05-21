@@ -1,4 +1,22 @@
-<!doctype html>
+<?php 
+
+include 'include_database.php';
+
+$sql = 'SELECT
+    news.id,
+    news.title,
+    news.short_text,
+    categories.name AS category_name
+FROM 
+    news, categories 
+WHERE 
+    news.category_id = categories.id';
+
+$result = mysqli_query($link, $sql);
+
+mysqli_close($link);
+
+?><!doctype html>
 <html lang="de">
   <head>
     <?php include 'include_head.php'; ?>
@@ -26,42 +44,20 @@
                 </tr>
             </thead>
             <tbody>
+                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Welches Europa soll's denn sein?</td>
-                    <td>Klima, Migration, Digitalisierung ...</td>
-                    <td>Politik</td>
+                    <th scope="row"><?php echo $row['id']; ?></th>
+                    <td><?php echo $row['title']; ?></td>
+                    <td><?php echo substr($row['short_text'], 0, 50); ?></td>
+                    <td><?php echo $row['category_name']; ?></td>
                     <td>
                         <div class="float-right">
-                            <a class="btn btn-secondary btn-sm" href="#" role="button">Bearbeiten</a>
-                            <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
+                            <a class="btn btn-secondary btn-sm" href="news_edit.php?id=<?php echo $row['id']; ?>" role="button">Bearbeiten</a>
+                            <a class="btn btn-danger btn-sm" href="news_delete.php?id=<?php echo $row['id']; ?>" role="button">Löschen</a>
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Deutsche Wirtschaft wieder leicht gewachsen</td>
-                    <td>Nach einer Stagnation Ende 2018 ...</td>
-                    <td>Wirtschaft</td>
-                    <td>
-                        <div class="float-right">
-                            <a class="btn btn-secondary btn-sm" href="#" role="button">Bearbeiten</a>
-                            <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Pep Guardiola hat doch recht</td>
-                    <td>Viele möchten einen Abgesang auf ihn ...</td>
-                    <td>Sport</td>
-                    <td>
-                        <div class="float-right">
-                            <a class="btn btn-secondary btn-sm" href="#" role="button">Bearbeiten</a>
-                            <a class="btn btn-danger btn-sm" href="#" role="button">Löschen</a>
-                        </div>
-                    </td>
-                </tr>
+                <?php } ?>
             </tbody>
         </table>
     </div>
